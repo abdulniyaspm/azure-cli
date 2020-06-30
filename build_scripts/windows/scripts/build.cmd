@@ -93,6 +93,10 @@ for %%a in (%CLI_SRC%\azure-cli %CLI_SRC%\azure-cli-core %CLI_SRC%\azure-cli-nsp
    %BUILDING_DIR%\python.exe -m pip install --no-warn-script-location --no-cache-dir --no-deps .
    popd
 )
+pushd %CLI_SRC%\azure-cli-testsdk
+%BUILDING_DIR%\python.exe -m pip install --no-warn-script-location --no-cache-dir .
+popd
+
 %BUILDING_DIR%\python.exe -m pip install -r %CLI_SRC%\azure-cli\requirements.py3.windows.txt
 
 if %errorlevel% neq 0 goto ERROR

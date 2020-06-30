@@ -164,7 +164,7 @@ setup(
         'az.completion.sh',
         'az.bat',
     ],
-    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+    packages=find_packages(),
     install_requires=DEPENDENCIES,
     package_data={
         'azure.cli.core': ['auth_landing_pages/*.html'],
